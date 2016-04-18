@@ -8,8 +8,15 @@
 @using (Html.BeginForm("Index", "Products", FormMethod.Post))
 {
     @Html.ActionLink("Create New", "Create")
-    <input type="submit" value="Filter" style="float: right;" />
-    <input type="text" name="filter" placeholder="Enter a product name" style="float: right;" />
+    <input type="submit" value="filter" style="float: right;" />
+    <input type="text" name="request" placeholder="Enter a product name" style="float: right;" />
+    <select name="category">
+    <option value="all">all</option>
+        @foreach (SelectListItem i in ViewBag.CategoryID)
+        {
+            <option>@i.Text.ToString()</option>
+        }
+    </select>
 }
 <br />
 <br />

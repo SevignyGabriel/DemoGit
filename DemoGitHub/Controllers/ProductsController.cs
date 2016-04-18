@@ -82,7 +82,7 @@ namespace DemoGitHub.Controllers
                     {
                         var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                         var fileExtension = Path.GetExtension(file.FileName);
-                        var path = Path.Combine(Server.MapPath("~/App_Data/Images/"), fileName + fileExtension);
+                        var path = Path.Combine(Server.MapPath("~/Content/Images/"), fileName + fileExtension);
                         file.SaveAs(path);
                         products.Photo = fileName + fileExtension;
                     }
@@ -130,7 +130,7 @@ namespace DemoGitHub.Controllers
                     {
                         var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                         var fileExtension = Path.GetExtension(file.FileName);
-                        var path = Path.Combine(Server.MapPath("~/App_Data/Images/"), fileName + fileExtension);
+                        var path = Path.Combine(Server.MapPath("~/Content/Images/"), fileName + fileExtension);
                         file.SaveAs(path);
                         products.Photo = fileName + fileExtension;
                     }

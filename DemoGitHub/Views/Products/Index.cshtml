@@ -83,9 +83,11 @@
             @*@Html.DisplayFor(modelItem => item.Photo)*@
             @if (@item.Photo == null)
             {
-                <img src="@Path.Combine("~/App_Data/Images/", "no_image.png")" alt="Product image" />
-            } else {
-                <img src="@Path.Combine("~/App_Data/Images/", @item.Photo)" alt="Product image" />
+                <img src="~/Content/Images/No_image_available.svg" alt="Product image" width="200" height="200" />
+            }
+            else
+            {
+                <img src="@Path.Combine("/Content/Images/", @item.Photo)" alt="Product image" width="200" height="200" />
             }
         <td>
             @Html.DisplayFor(modelItem => item.Categories.CategoryName)
